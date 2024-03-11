@@ -1,0 +1,121 @@
+@font-face {
+  font-family: product sans;
+  src: url(fonts/product-sans/Product\ Sans\ Regular.ttf);
+}
+@font-face {
+  font-family: product sans2;
+  src: url(fonts/product-sans/Product\ Sans\ Italic.ttf);
+}
+@font-face {
+  font-family: main;
+  src: url("Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: product sans;
+  color: #fff;
+}
+
+.main {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(17, 125, 168);
+  overflow: hidden;
+}
+nav {
+  height: 10vh;
+  width: 100vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+nav .bars {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5vw;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.part1 {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  perspective: 800px;
+  z-index: 99;
+  perspective-origin: bottom;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.top-content {
+  perspective-origin: top;
+  height: 200px;
+}
+
+.bottom-content {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: #fff;
+
+  perspective-origin: bottom;
+}
+
+.part2 {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(17, 125, 168);
+}
+.part1 span {
+  font-weight: lighter;
+  color: rgb(205, 201, 201);
+}
+.part1 h1 {
+  font-size: 5vw;
+  line-height: 5rem;
+  z-index: 999;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-family: main;
+  font-weight: lighter;
+}
+.img-part {
+  height: 25vw;
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.part1 .main-img {
+  height: 20vw;
+  width: 45vw;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 0%);
+  background: url("images/mountain-img.jpg");
+  background-size: cover;
+  border-radius: 0.5vw;
+  z-index: -9;
+}
+.part1 .main-img video {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.part1 .down {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, 0%);
+}
